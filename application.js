@@ -1,5 +1,8 @@
-var inputHTML = '<input type="file" name="images[]" />'
+var inputHTML = '<div><input type="file" name="images[]" /></div>'
 
 function addFileField() {
-  $('upload').down('div').insert(inputHTML)
+  var el = $('inputs')
+  el.insert(inputHTML)
+  var newdiv = $(el.lastChild).setOpacity(0)
+  new Effect.Opacity(newdiv)
 }

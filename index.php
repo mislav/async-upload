@@ -9,6 +9,7 @@ $files = glob('./images/*-thumb.*');
 	<title>parkour.hr - admin - slike</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="prototype.js"></script>
+  <script type="text/javascript" src="scriptaculous/effects.js"></script>
   <script type="text/javascript" src="application.js"></script>
 </head>
 <body>
@@ -26,14 +27,20 @@ $files = glob('./images/*-thumb.*');
     <form id="upload" action="upload.php" method="POST" enctype="multipart/form-data">
       <h2>Upload a new image</h2>
       <p>Choose a file: <a href="#" onclick="addFileField(); return false">(add more fields)</a></p>
-      <div>
-        <input type="file" name="images[]" />
+
+      <div id="inputs">
+        <div><input type="file" name="images[]" /></div>
       </div>
 
       <div class="buttons">
-        <button type="submit" class="positive">Upload images!</button>
+        <button type="submit" class="positive">Upload images! &raquo;</button>
       </div>
     </form>
+
+    <div id="messages">
+      <div class="error">Error: upload limit exceeded</div>
+      <div class="notice">Successfully uploaded "Some File".</div>
+    </div>
   </div>
 </div>
 

@@ -39,8 +39,25 @@ img { border: none }
   right: 0;
   bottom: 0;
   overflow: auto;    
-  width: 20em;
-  background: lemonchiffon
+  width: 22em;
+  background: lemonchiffon;
+  border-left: 1px solid #aaa;
+}
+#messages {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+}
+#messages > div {
+  border-top: 1px dotted gray;
+  padding: 1em 2em;
+}
+#messages div.notice {
+  background: lightgreen;
+}
+#messages div.error {
+  background: salmon;
+  color: maroon;
+  font-weight: bold;
 }
 
 #images {
@@ -49,18 +66,20 @@ img { border: none }
   position: absolute;    
   top: 0;
   left: 0;
-  right: 23em;
+  right: 25em;
   bottom: 0;
   overflow: auto;
 }
 
 form div.buttons {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 input[type=file] {
   margin-bottom: 0.4em;
   border-color: #aaa;
 }
+form p a { color: salmon; text-decoration: none; padding: 0.3em 0.5em }
+form p a:hover { color: crimson; text-decoration: underline }
 
 h2:first-child { margin-top: 0 }
 
