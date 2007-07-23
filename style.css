@@ -70,6 +70,9 @@ img { border: none }
   bottom: 0;
   overflow: auto;
 }
+#images.empty {
+  background: white url(stripe.png);
+}
 
 form div.buttons {
   margin-top: 1em;

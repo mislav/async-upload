@@ -8,14 +8,15 @@ $files = glob('./images/*-thumb.*');
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>parkour.hr - admin - slike</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="prototype.js"></script>
+
+  <script type="text/javascript" src="scriptaculous/prototype.js"></script>
   <script type="text/javascript" src="scriptaculous/effects.js"></script>
   <script type="text/javascript" src="application.js"></script>
 </head>
 <body>
 
 <div id="main">
-  <div id="images">
+  <div id="images"<?= count($files) ? '' : ' class="empty"' ?>>
     <? foreach($files as $filename_thumb):
       $filename = str_replace('-thumb', '', $filename_thumb);
       $name = preg_replace('/\.\w+$/', '', $filename);
@@ -24,7 +25,7 @@ $files = glob('./images/*-thumb.*');
   </div>
 
   <div id="sidebar">
-    <form id="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+    <form id="upload" action="./upload.php" method="POST" enctype="multipart/form-data">
       <h2>Upload a new image</h2>
       <p>Choose a file: <a href="#" onclick="addFileField(); return false">(add more fields)</a></p>
 
@@ -37,10 +38,10 @@ $files = glob('./images/*-thumb.*');
       </div>
     </form>
 
-    <div id="messages">
+    <!--<div id="messages">
       <div class="error">Error: upload limit exceeded</div>
       <div class="notice">Successfully uploaded "Some File".</div>
-    </div>
+    </div>-->
   </div>
 </div>
 
