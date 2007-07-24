@@ -38,10 +38,8 @@ $files = glob('./images/*-thumb.*');
       </div>
     </form>
 
-    <!--<div id="messages">
-      <div class="error">Error: upload limit exceeded</div>
-      <div class="notice">Successfully uploaded "Some File".</div>
-    </div>-->
+    <div id="messages">
+    </div>
   </div>
 </div>
 
