@@ -25,6 +25,8 @@ function processResponse(json) {
 
     message('Successfully uploaded ' + json.saved.length + ' images')
   }
+
+  $('inputs').update(inputHTML)
 }
 
 function messageFailed(msg) {
@@ -44,4 +46,15 @@ function message(msg, className) {
   var el = new Element('div', { className:className }).update(msg)
   $('messages').insert(el.setOpacity(0))
   new Effect.Opacity(el, { duration:0.6 })
+  eraseMessage.delay(10, el)
+}
+
+function eraseMessage(el) {
+  new Effect.Opacity(el, {
+    duration: 1, to: 0,
+    afterFinish: function(o) {
+      o.element.remove()
+      console.info('removed!')
+    }
+  })
 }
