@@ -6,7 +6,7 @@ $files = glob('./images/*-thumb.*');
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hr" lang="hr">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>parkour.hr - admin - slike</title>
+	<title>Asynchronous image upload with resizing</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 
   <script type="text/javascript" src="scriptaculous/prototype.js"></script>
